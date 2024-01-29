@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">Setting Things Up - Part 1 | Palworld Modding Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://pwmodding.wiki/img/palworld.png"><meta data-rh="true" name="twitter:image" content="https://pwmodding.wiki/img/palworld.png"><meta data-rh="true" property="og:url" content="https://pwmodding.wiki/docs/creating-blueprint-mods/mod-setup-1"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" property="og:locale:alternate" content="ja"><meta data-rh="true" property="og:locale:alternate" content="ru"><meta data-rh="true" property="og:locale:alternate" content="uk"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Setting Things Up - Part 1 | Palworld Modding Docs"><meta data-rh="true" name="description" content="Where we left off would be Double-clicking Pal.uproject, You should see this screen"><meta data-rh="true" property="og:description" content="Where we left off would be Double-clicking Pal.uproject, You should see this screen"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pwmodding.wiki/docs/creating-blueprint-mods/mod-setup-1"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/docs/creating-blueprint-mods/mod-setup-1" hreflang="en"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/fr/docs/creating-blueprint-mods/mod-setup-1" hreflang="fr"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/ja/docs/creating-blueprint-mods/mod-setup-1" hreflang="ja"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/ru/docs/creating-blueprint-mods/mod-setup-1" hreflang="ru"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/uk/docs/creating-blueprint-mods/mod-setup-1" hreflang="uk"><link data-rh="true" rel="alternate" href="https://pwmodding.wiki/docs/creating-blueprint-mods/mod-setup-1" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Palworld Modding Docs RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Palworld Modding Docs Atom Feed"><link rel="stylesheet" href="/assets/css/styles.ec529bcc.css">
-<script src="/assets/js/runtime~main.d0c4b7f4.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3fe23441.js" defer="defer"></script>
 <script src="/assets/js/main.0835f10d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -58,21 +58,18 @@
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="mod-buttons">Mod Buttons<a href="#mod-buttons" class="hash-link" aria-label="Direct link to Mod Buttons" title="Direct link to Mod Buttons">​</a></h3>
 <ul>
-<li>Create a String Variable called ModButtons in your ModActor, In the properties panel change the following to the 6 squares in a box</li>
+<li>Create a String Variable called ModButtons in your ModActor, In the properties panel change the following to the 9 squares in a box</li>
 </ul>
 <p><img decoding="async" loading="lazy" alt="ModButtonsArray" src="/assets/images/ModButtonsArray-05d42c5c76e9911b061f93f92ff67a7c.png" width="468" height="476" class="img_ev3q"></p>
 <ul>
 <li>Create a new custom event called <code>ModMenuButtonPressed</code>
-<ul>
-<li><img decoding="async" loading="lazy" alt="ModMenuButtonPressed" src="/assets/images/ModMenuButtonPressed-785a0e8a070d103ed02f1f4f83223825.png" width="304" height="127" class="img_ev3q"></li>
-</ul>
-</li>
+<img decoding="async" loading="lazy" alt="ModMenuButtonPressed" src="/assets/images/ModMenuButtonPressed-785a0e8a070d103ed02f1f4f83223825.png" width="304" height="127" class="img_ev3q"></li>
 <li>Under the newly created event, Add a input variable that is a <code>Integer</code> named <code>Index</code> <img decoding="async" loading="lazy" alt="ModMenuInt" src="/assets/images/MonMenuButtonPRessedInt-aaedc8521031257bafc9b9543e0cc1a4.png" width="489" height="368" class="img_ev3q"></li>
 <li>Next add a <code>Switch on Int</code> action, connected to the <code>ModMenuButtonPressed</code> event.<!-- -->
 <ul>
 <li>For every single button you wish to have, you will add a pin to this <code>Switch On Int</code></li>
 <li>Your pin&#x27;s must match up to <code>ModButtons String Array</code> <img decoding="async" loading="lazy" alt="ModButtonSwitchOnInt" src="/assets/images/ModSwitchOnEvent-69bb2aeb1551a0cd531f8db1fa160d88.png" width="806" height="247" class="img_ev3q"></li>
-<li>When a <code>ModButton</code> is clicked, it will send a Exec signal, through which ever integer is connected to it.</li>
+<li>When a <code>ModButton</code> is clicked, it will send a Exec signal, through which every integer is connected to it.</li>
 </ul>
 </li>
 </ul>

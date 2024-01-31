@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Neueste Beitr\xe4ge","items":[{"title":"Blog","permalink":"/de/blog/Blog","unlisted":false}]}')}}]);
